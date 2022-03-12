@@ -6,9 +6,9 @@ GO
 -- Create the table in the specified schema
 CREATE TABLE [dbo].[Usuario]
 (
-    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [Nombre] NVARCHAR(50) NOT NULL,
-    [Contraseña] NVARCHAR(50) NOT NULL
+    [Contrasenia] NVARCHAR(50) NOT NULL
     -- Specify more columns here
 );
 GO

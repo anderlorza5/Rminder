@@ -6,7 +6,7 @@ GO
 -- Create the table in the specified schema
 CREATE TABLE [dbo].[Suscripcion]
 (
-    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, -- Primary Key column
     [Id_usuario] INT NOT NULL,
     [Nombre] NVARCHAR(50) NOT NULL,
     [Categoria] NVARCHAR(50) NOT NULL,
