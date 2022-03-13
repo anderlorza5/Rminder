@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: '', component: PaginaLoginComponent},
   {path: 'index', component: GastosComponent},
   {path: 'suscripcions/:idUsuario', component: SuscripcionesComponent}
+
 ];
 
 @NgModule({

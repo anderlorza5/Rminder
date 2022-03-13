@@ -21,7 +21,7 @@ export class SuscripcionService {
     bodyData.nombre=body.suscripcionNombre;
     bodyData.categoria=body.suscripcionCategoria;
     bodyData.imagen=body.suscripcionImagen;
-    bodyData.fechaVencimiento=body.suscripcionFechaVencimiento;
+    bodyData.fechaVencimiento=body.suscripcionfechaVencimiento;
     bodyData.precio=body.suscripcionPrecio;
 
 
