@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PaginaGastosComponent } from './pages/pagina-gastos/pagina-gastos.component';
 import { SuscripcionesComponent } from './components/suscripciones/suscripciones.component';
 import { GastosComponent } from './components/gastos/gastos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { GastosComponent } from './components/gastos/gastos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
