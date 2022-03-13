@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuariosService } from 'src/app/services/user.service';
 
@@ -10,7 +11,7 @@ import { UsuariosService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private _userService: UsuariosService) {
+  constructor(private fb: FormBuilder, private _userService: UsuariosService, public router: Router) {
     this.usuarios = null;
     this.idUsuario = 0;
     this.frase = "";
@@ -37,6 +38,7 @@ export class LoginComponent implements OnInit {
     this._userService.getUsuarioData().subscribe((apiUsers)=> (this.usuarios = apiUsers));
   }
 
+  //Desde aqui hasta abajo para el login
   onSubmit(){
     this.comprobarUser();
     this.comprobarContra();
@@ -49,7 +51,7 @@ export class LoginComponent implements OnInit {
     }
     else if(this.userOK == true && this.contraOK == true){
       this.frase="Todo correcto";
-      
+      this.router.navigate(['/suscripcions/'+this.idUsuario])
     }
 
   }
