@@ -1,4 +1,4 @@
-export class Suscripcion {
+export class baseSuscripcion {
 
   id_Usuario: number;
   nombre: String;
