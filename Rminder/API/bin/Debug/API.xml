@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:Api.Controllers.SuscripcionsController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.SuscripcionsController},ISuscripcionService)">
+            <summary>
+            It creates a SuscripcionController
+            </summary>
+            <param name="logger">used for logging</param>
+            <param name="SuscripcionService">used for dealing with the Suscripcion data</param>
+        </member>
+        <member name="M:Api.Controllers.SuscripcionsController.Get">
+            <summary>
+            Returns all the Suscripcions
+            </summary>
+            <returns>Returns a list of <see cref="T:SuscripcionDTO"/></returns>
+        </member>
+        <member name="M:Api.Controllers.SuscripcionsController.Get(System.Int32)">
+            <summary>
+            It returns a Suscripcion by id 
+            </summary>
+            <param name="Id">the id of the Suscripcion</param>
+            <returns>Returns a Suscripcion <see cref="T:SuscripcionDTO"/></returns>
+        </member>
+        <member name="M:Api.Controllers.SuscripcionsController.Delete(System.Int32)">
+            <summary>
+            it deletes a Suscripcion
+            </summary>
+            <param name="Id">the id of the Suscripcion that is going to be delated</param>
+            <returns>Returns the deleted Suscripcion <see cref="T:SuscripcionDTO"/></returns>
+        </member>
+        <member name="M:Api.Controllers.SuscripcionsController.Post(BaseSuscripcionDTO)">
+             <summary>
+             It creates a Suscripcion
+             </summary>
+             <param name="baseSuscripcion">the created Suscripcion <see cref="T:BaseSuscripcionDTO"/></param>
+             <returns>Returns the created Suscripcion <see cref="T:SuscripcionDTO"/></returns>
+            <remarks>
+             Sample request:
+            
+             POST
+             {
+            
+             
+             "anio": 3029,
+             "duration": 239,
+             "lenguaje": "Gallego",
+             "actor_id": 1,
+             "director_id": 2,
+            
+             }
+             </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Api.Controllers.SuscripcionsController.Put(BaseSuscripcionDTO,System.Int32)" -->
+        <member name="M:Api.Controllers.UsersController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.UsersController},IUserService)">
+            <summary>
+            It creates a UserController
+            </summary>
+            <param name="logger">used for logging</param>
+            <param name="UserService">used for dealing with the User data</param>
+        </member>
+        <member name="M:Api.Controllers.UsersController.Get">
+            <summary>
+            Returns all the Users
+            </summary>
+            <returns>Returns a list of <see cref="T:UserDTO"/></returns>
+        </member>
+        <member name="M:Api.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            It returns a User by id 
+            </summary>
+            <param name="Id">the id of the User</param>
+            <returns>Returns a User <see cref="T:UserDTO"/></returns>
+        </member>
+        <member name="M:Api.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            it deletes a User
+            </summary>
+            <param name="Id">the id of the User that is going to be delated</param>
+            <returns>Returns the deleted User <see cref="T:UserDTO"/></returns>
+        </member>
+        <member name="M:Api.Controllers.UsersController.Post(BaseUserDTO)">
+             <summary>
+             It creates a User
+             </summary>
+             <param name="baseUser">the created User <see cref="T:BaseUserDTO"/></param>
+             <returns>Returns the created User <see cref="T:UserDTO"/></returns>
+            <remarks>
+             Sample request:
+            
+             POST
+             {
+            
+             
+             "name": "Prueba Swagger Post",
+             "surname": "Daniel",
+             "birthdate": "2020-12-23 15:40:45.2756145",
+            
+             }
+             </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Api.Controllers.UsersController.Put(BaseUserDTO,System.Int32)" -->
+        <member name="T:ISuscripcionService">
+            <summary>
+            This is the service for Suscripcions
+            </summary>
+        </member>
+        <member name="T:IUserService">
+            <summary>
+            This is the service for Users
+            </summary>
+        </member>
+        <member name="T:BaseSuscripcionDTO">
+            <summary>
+            Base DTO of the Suscripcion, used in creation
+            </summary>
+        </member>
+        <member name="T:BaseUserDTO">
+            <summary>
+            Base DTO of the Director, used in creation
+            </summary>
+        </member>
+        <member name="T:SuscripcionDTO">
+            <summary>
+            DTO of the Suscripcion
+            </summary>
+        </member>
+        <member name="T:UserDTO">
+            <summary>
+            DTO of the User
+            </summary>
+        </member>
+    </members>
+</doc>

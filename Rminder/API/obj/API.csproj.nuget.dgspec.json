@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/ander/Rminder git/Rminder/API/API.csproj": {}
+    "/home/ubuntu/Escritorio/trabajo/Rminder/Rminder/API/API.csproj": {}
   },
   "projects": {
-    "/home/ander/Rminder git/Rminder/API/API.csproj": {
+    "/home/ubuntu/Escritorio/trabajo/Rminder/Rminder/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ander/Rminder git/Rminder/API/API.csproj",
+        "projectUniqueName": "/home/ubuntu/Escritorio/trabajo/Rminder/Rminder/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/ander/Rminder git/Rminder/API/API.csproj",
-        "packagesPath": "/home/ander/.nuget/packages/",
-        "outputPath": "/home/ander/Rminder git/Rminder/API/obj/",
+        "projectPath": "/home/ubuntu/Escritorio/trabajo/Rminder/Rminder/API/API.csproj",
+        "packagesPath": "/home/ubuntu/.nuget/packages/",
+        "outputPath": "/home/ubuntu/Escritorio/trabajo/Rminder/Rminder/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ander/.nuget/NuGet/NuGet.Config"
+          "/home/ubuntu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -38,6 +38,26 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -61,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }
