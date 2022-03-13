@@ -14,13 +14,17 @@ export class LoginComponent implements OnInit {
     this.usuarios = null;
     this.idUsuario = 0;
     this.frase = "";
-    this.contador = 0;
-
+    this.userOK = false;
+    this.contraOK = false;
    }
   usuarios: Usuario[] | null;
   idUsuario : number;
   frase: string;
-  contador: number;
+
+
+  userOK : boolean;
+  contraOK : boolean;
+
 
 
 
@@ -35,24 +39,42 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this.comprobarUser();
-    if(this.contador == 0){
-      this.frase="No existe una cuenta con este nombre";
-    }else{
-      this.frase="";
+    this.comprobarContra();
+
+    if(this.userForm.value.nombre == "" || this.userForm.value.contrasenia == ""){
+      this.frase="Tienes que rellenar todos los campos"
     }
+    else if(this.userOK == false || this.contraOK == false){
+      this.frase="Nombre de usuario o contraseña incorrectas.";
+    }
+    else if(this.userOK == true && this.contraOK == true){
+      this.frase="Todo correcto";
+      
+    }
+
   }
 
   comprobarUser(){
-    this.contador=0;
+    this.userOK = false;
     if(this.usuarios != null){
       this.usuarios.forEach(element => {
         if(this.userForm.value.nombre == element.nombre){
           this.idUsuario = element.id;
-          this.contador++;
+          this.userOK = true;
         }
       });
     }
+  }
 
+  comprobarContra(){
+    this.contraOK = false;
+    if(this.usuarios != null){
+      if(this.usuarios[this.idUsuario-1].contrasenia == this.userForm.value.contrasenia){
+
+        this.contraOK = true;
+      }
+
+    }
   }
 
 }

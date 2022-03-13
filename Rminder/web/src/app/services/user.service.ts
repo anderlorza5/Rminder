@@ -21,7 +21,7 @@ export class UsuariosService {
     let bodyData =new Usuario();
     bodyData.id=body.usuarioId;
     bodyData.nombre=body.usuarioNombre;//estos nombres van igual al declarar el formulario en l ts
-    bodyData.contraseña= body.usuarioContraseña;
+    bodyData.contrasenia= body.usuarioContraseña;
 
 
 
