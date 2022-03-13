@@ -3,7 +3,7 @@ export class Usuario {
 
   nombre: String;
 
-  contraseña: String;
+  contrasenia: String;
 
 
 
@@ -13,6 +13,6 @@ export class Usuario {
 
     this.nombre="";
 
-    this.contraseña="";
+    this.contrasenia="";
   }
 }

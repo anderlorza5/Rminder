@@ -17,7 +17,7 @@
 <body class="text-center">
 
 <main class="form-signin">
-<form [formGroup]="userForm" (ngSubmin)="onSubmit()">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
 <img class="mb-4" src="../assets/images/logo.png" alt="" width="300" height="300">
 <h1 class="h3 mb-3 fw-normal">Porfavor inicia sesión</h1>
 
@@ -33,8 +33,9 @@
 
 <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
 <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
+<p style="color: red;">{{frase}}</p>
 <p>{{idUsuario}}</p>
-<p>{{usuarios}}</p>
+
 </form>
 </main>
 
