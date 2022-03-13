@@ -13,11 +13,14 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private _userService: UsuariosService) {
     this.usuarios = null;
     this.idUsuario = 0;
+    this.frase = "";
+    this.contador = 0;
 
    }
   usuarios: Usuario[] | null;
   idUsuario : number;
-
+  frase: string;
+  contador: number;
 
 
 
@@ -32,13 +35,20 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     this.comprobarUser();
+    if(this.contador == 0){
+      this.frase="No existe una cuenta con este nombre";
+    }else{
+      this.frase="";
+    }
   }
 
   comprobarUser(){
+    this.contador=0;
     if(this.usuarios != null){
       this.usuarios.forEach(element => {
         if(this.userForm.value.nombre == element.nombre){
           this.idUsuario = element.id;
+          this.contador++;
         }
       });
     }
