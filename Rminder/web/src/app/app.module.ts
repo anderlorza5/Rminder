@@ -14,6 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PaginaGastosComponent } from './pages/pagina-gastos/pagina-gastos.component';
 import { SuscripcionesComponent } from './components/suscripciones/suscripciones.component';
 import { GastosComponent } from './components/gastos/gastos.component';
+import { SuscripcionService } from './services/suscripcion.Service';
+import { UsuariosService } from './services/user.service';
 
 
 @NgModule({
@@ -36,7 +38,7 @@ import { GastosComponent } from './components/gastos/gastos.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SuscripcionService,UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
