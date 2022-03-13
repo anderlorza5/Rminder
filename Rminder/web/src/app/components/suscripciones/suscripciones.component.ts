@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Suscripcion } from 'src/app/models/suscripcion.model';
-import { SuscripcionService } from 'src/app/services/suscripcion.Service';
+import { SuscripcionService } from 'src/app/services/suscripcion.service';
 
 @Component({
   selector: 'app-suscripciones',

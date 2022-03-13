@@ -16,7 +16,9 @@ import { SuscripcionesComponent } from './components/suscripciones/suscripciones
 import { GastosComponent } from './components/gastos/gastos.component';
 import { UsuariosService } from './services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SuscripcionService } from './services/suscripcion.Service';
+import { SuscripcionService } from './services/suscripcion.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -26,21 +28,23 @@ import { SuscripcionService } from './services/suscripcion.Service';
     HomeComponentComponent,
 
     LoginComponent,
-     PaginaLoginComponent,
-     PaginaSuscripcionesComponent,
-     HeaderComponent,
-     FooterComponent,
-     PaginaGastosComponent,
-     SuscripcionesComponent,
-     GastosComponent,
+    PaginaLoginComponent,
+    PaginaSuscripcionesComponent,
+    HeaderComponent,
+    FooterComponent,
+    PaginaGastosComponent,
+    SuscripcionesComponent,
+    GastosComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
-  providers: [SuscripcionService,UsuariosService],
+  providers: [SuscripcionService, UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

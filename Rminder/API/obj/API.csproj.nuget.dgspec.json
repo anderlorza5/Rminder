@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/daniel/Escritorio/Trabajo_Grupo/Rminder/Rminder/API/API.csproj": {}
+    "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj": {}
   },
   "projects": {
-    "/home/daniel/Escritorio/Trabajo_Grupo/Rminder/Rminder/API/API.csproj": {
+    "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/daniel/Escritorio/Trabajo_Grupo/Rminder/Rminder/API/API.csproj",
+        "projectUniqueName": "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/daniel/Escritorio/Trabajo_Grupo/Rminder/Rminder/API/API.csproj",
-        "packagesPath": "/home/daniel/.nuget/packages/",
-        "outputPath": "/home/daniel/Escritorio/Trabajo_Grupo/Rminder/Rminder/API/obj/",
+        "projectPath": "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj",
+        "packagesPath": "/home/alumno/.nuget/packages/",
+        "outputPath": "/home/alumno/Documentos/Rminder/Rminder/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/daniel/.nuget/NuGet/NuGet.Config"
+          "/home/alumno/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
