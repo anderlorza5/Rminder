@@ -7,7 +7,7 @@ import { PaginaLoginComponent } from './pages/pagina-login/pagina-login.componen
 const routes: Routes = [
   {path: '', component: PaginaLoginComponent},
   {path: 'index', component: GastosComponent},
-  {path: 'suscripcion', component: SuscripcionesComponent}
+  {path: 'suscripcions', component: SuscripcionesComponent}
 ];
 
 @NgModule({
