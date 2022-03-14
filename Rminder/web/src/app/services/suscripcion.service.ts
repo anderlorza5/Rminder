@@ -15,6 +15,8 @@ export class SuscripcionService {
     return this.http.get<Suscripcion>(environment.API_URL + 'suscripcions/'+id);
   }
 
+
+
   postSuscripcionData(body : any) : Suscripcion {
     let bodyData =new Suscripcion();
     bodyData.id_Usuario=body.suscripcionId_Usuario;
@@ -28,11 +30,11 @@ export class SuscripcionService {
     let result =new Suscripcion();
     this.http.post<Suscripcion>(environment.API_URL + 'suscripcions',bodyData)
     .subscribe(
-      (response) => {                           
+      (response) => {
         console.log('response received')
         result = response;
       },
-      (error) => {                            
+      (error) => {
         console.error('error caught in component')
       }
     )

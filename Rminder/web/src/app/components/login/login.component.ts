@@ -15,18 +15,21 @@ export class LoginComponent implements OnInit {
     this.usuarios = null;
     this.idUsuario = 0;
     this.frase = "";
+    this.frase2 = "";
     this.userOK = false;
     this.contraOK = false;
+    this.contador = 0;
+
    }
   usuarios: Usuario[] | null;
   idUsuario : number;
   frase: string;
+  frase2: string;
+  contador: number;
 
 
   userOK : boolean;
   contraOK : boolean;
-
-
 
 
   userForm = this.fb.group({
@@ -43,8 +46,11 @@ export class LoginComponent implements OnInit {
     this.comprobarUser();
     this.comprobarContra();
 
-    if(this.userForm.value.nombre == "" || this.userForm.value.contrasenia == ""){
-      this.frase="Tienes que rellenar todos los campos"
+    if(this.contador==0){
+      this.frase="Usuario no existe";
+    }
+    else if(this.userForm.value.nombre == "" || this.userForm.value.contrasenia == ""){
+    this.frase="Tienes que rellenar todos los campos"
     }
     else if(this.userOK == false || this.contraOK == false){
       this.frase="Nombre de usuario o contraseña incorrectas.";
@@ -57,12 +63,14 @@ export class LoginComponent implements OnInit {
   }
 
   comprobarUser(){
+    this.contador=0;
     this.userOK = false;
     if(this.usuarios != null){
       this.usuarios.forEach(element => {
         if(this.userForm.value.nombre == element.nombre){
           this.idUsuario = element.id;
           this.userOK = true;
+          this.contador++;
         }
       });
     }
