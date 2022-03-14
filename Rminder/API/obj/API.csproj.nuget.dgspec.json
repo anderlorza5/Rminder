@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj": {}
+    "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/API.csproj": {}
   },
   "projects": {
-    "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj": {
+    "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj",
+        "projectUniqueName": "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj",
-        "packagesPath": "/home/alumno/.nuget/packages/",
-        "outputPath": "/home/alumno/Documentos/Rminder/Rminder/API/obj/",
+        "projectPath": "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/API.csproj",
+        "packagesPath": "/home/ubuntu/.nuget/packages/",
+        "outputPath": "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alumno/.nuget/NuGet/NuGet.Config"
+          "/home/ubuntu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

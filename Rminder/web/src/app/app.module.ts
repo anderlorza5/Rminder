@@ -18,6 +18,8 @@ import { UsuariosService } from './services/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SuscripcionService } from './services/suscripcion.service';
 import { HttpClientModule } from '@angular/common/http';
+import { NgChartsModule } from 'ng2-charts';
+import { GraficoComponent } from './components/grafico/grafico.component';
 
 
 
@@ -35,13 +37,15 @@ import { HttpClientModule } from '@angular/common/http';
     PaginaGastosComponent,
     SuscripcionesComponent,
     GastosComponent,
+    GraficoComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgChartsModule
 
   ],
   providers: [SuscripcionService, UsuariosService],
