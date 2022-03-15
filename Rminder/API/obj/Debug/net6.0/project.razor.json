@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "FilePath": "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/API.csproj",
-=======
-  "FilePath": "/home/alumno/Documentos/Rminder/Rminder/API/API.csproj",
->>>>>>> f3fce8a2c205a0933106c86882f9dc423a33aa6d
+  "FilePath": "/home/ander/Rminder/Rminder/API/API.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",

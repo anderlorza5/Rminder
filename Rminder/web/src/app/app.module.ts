@@ -20,6 +20,7 @@ import { SuscripcionService } from './services/suscripcion.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
 import { GraficoComponent } from './components/grafico/grafico.component';
+import { NuevaSubComponent } from './components/nueva-sub/nueva-sub.component';
 
 
 
@@ -38,6 +39,7 @@ import { GraficoComponent } from './components/grafico/grafico.component';
     SuscripcionesComponent,
     GastosComponent,
     GraficoComponent,
+    NuevaSubComponent,
 
   ],
   imports: [

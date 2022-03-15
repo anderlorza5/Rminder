@@ -1552,19 +1552,19 @@
     ]
   },
   "packageFolders": {
-    "/home/ubuntu/.nuget/packages/": {}
+    "/home/ander/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/API.csproj",
+      "projectUniqueName": "/home/ander/Rminder/Rminder/API/API.csproj",
       "projectName": "API",
-      "projectPath": "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/API.csproj",
-      "packagesPath": "/home/ubuntu/.nuget/packages/",
-      "outputPath": "/home/ubuntu/Escritorio/lala/Rminder/Rminder/API/obj/",
+      "projectPath": "/home/ander/Rminder/Rminder/API/API.csproj",
+      "packagesPath": "/home/ander/.nuget/packages/",
+      "outputPath": "/home/ander/Rminder/Rminder/API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ubuntu/.nuget/NuGet/NuGet.Config"
+        "/home/ander/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1631,7 +1631,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
