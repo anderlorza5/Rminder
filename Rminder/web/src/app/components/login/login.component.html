@@ -1,0 +1,49 @@
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<body style="height: 100%;" class="text-center">
+
+  <!--Formulario para usuarios ya creados-->
+<main class="form-signin">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <img class="mb-4" src="../assets/images/logo.png" alt="" width="300" height="300">
+    <h1 class="h3 mb-3 fw-normal">Porfavor inicia sesión</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" formControlName="nombre" form id="floatingInput" placeholder="Usuario">
+      <label for="floatingInput">Nombre de usuario</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" formControlName="contrasenia" id="floatingPassword" placeholder="Contraseña">
+      <label for="floatingPassword">Contraseña</label>
+    </div>
+
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
+    <p style="color: red;">{{frase}}</p>
+
+    <p>{{idUsuario}}</p>
+
+  </form>
+</main>
+
+
+
+
+
+
+</body>
