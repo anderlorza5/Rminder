@@ -43,11 +43,13 @@ export class NuevaSubComponent implements OnInit {
 
    }
   onSubmit(){
+    this.imagen();
+
     this.suscripcionForm.value.id_usuario = this.idUsuario;
     this._suscripcionService.postSuscripcionData(this.suscripcionForm.value)
     alert("Suscripcion "+this.suscripcionForm.value.nombre+" creada.")
-    this.router.navigate(['/suscripcions/'+this.idUsuario]);
-  }
+    this.router.navigate(['/suscripcions/'+this.idUsuario]);}
+
 
   onVolver(){
     this.router.navigate(['/suscripcions/'+this.idUsuario]);
@@ -59,5 +61,27 @@ export class NuevaSubComponent implements OnInit {
     });
   }
 
+  imagen(){
+    alert(this.suscripcionForm.value.categoria)
+    switch (this.suscripcionForm.value.categoria) {
+
+      case "Entretenimiento":
+        this.suscripcionForm.value.imagen = "./assets/img/ent.png";
+        break;
+
+      case "Turismo":
+        this.suscripcionForm.value.imagen = "./assets/img/turismo.png";
+        break;
+
+      case "Comida":
+        this.suscripcionForm.value.imagen = "./assets/img/comida.png";
+        break;
+
+      case "Revistas":
+        this.suscripcionForm.value.imagen = "./assets/img/revistas.png";
+        break;
+    }
+
+  }
 
 }

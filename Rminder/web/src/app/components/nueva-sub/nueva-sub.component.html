@@ -22,6 +22,7 @@
                                 <option value="Crunchyroll">
                                 <option value="Comida">
                                 <option value="Revistas">
+                                <option value="Libros">
                               </datalist>
                           </div>
                       </div>
@@ -29,14 +30,20 @@
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                           <div class="col-md-8">
-                              <input id="lname" name="name" formControlName="categoria" type="text" placeholder="categorias" class="form-control"> <!--Categoria-->
+                              <input id="lname" name="name" formControlName="categoria" list="cat" placeholder="Categoria" class="form-control"> <!--Categoria-->
+                              <datalist id="cat">
+                                <option value="Entretenimiento">
+                                <option value="Turismo">
+                                <option value="Comida">
+                                <option value="Revistas">
+                              </datalist>
                           </div>
                       </div>
                       <br>
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                           <div class="col-md-8">
-                              <input formControlName="imagen"id="email" name="email" type="text" placeholder="imagen" class="form-control" hidden> <!--Imagen-->
+                              <input formControlName="imagen"id="Email" name="email" type="text" placeholder="Imagen" class="form-control" hidden> <!--Imagen-->
                           </div>
                       </div>
                       <br>
@@ -51,7 +58,7 @@
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                           <div class="col-md-8">
                               <label for="precio">
-                                <input formControlName="precio" id="precio" name="precio" type="number" placeholder="precio" class="form-control"> <!--Precio-->
+                                <input formControlName="precio" id="precio" name="precio" type="number" placeholder="Precio" class="form-control"> <!--Precio-->
                               </label>
                           </div>
                       </div>
