@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { FormControl, FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
@@ -13,7 +13,10 @@ import {
   ValidatorFn,
 
   } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { Usuario } from 'src/app/models/usuario.model';
   import { SuscripcionService } from 'src/app/services/suscripcion.service';
+import { UsuariosService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-nueva-sub',
@@ -22,17 +25,16 @@ import {
 })
 export class NuevaSubComponent implements OnInit {
 
-  /*suscripcionForm=this.fb.group(){
-    suscripcionNombre:['',Validators.required],
-    suscripcionCategoria:['',Validators.required],
-    suscripcionImagen:['',Validators.required],
-    suscripcionFecha:['',Validators.required],
-    suscripcionPrecio:['',Validators.required]
-  }*/
 
-  constructor( private fb: FormBuilder, private _suscripcionService: SuscripcionService) { }
+  constructor( private fb: FormBuilder, private _suscripcionService: SuscripcionService, private _userService: UsuariosService, private activatedRoute: ActivatedRoute) {
+
+   }
   onSubmit(){
     this._suscripcionService.postSuscripcionData(this.suscripcionForm.value)
+  }
+
+  onVolver(){
+    window.location.href='http://localhost:4200/suscripcions/';
   }
 
   ngOnInit(): void {

@@ -4,12 +4,14 @@ import { GastosComponent } from './components/gastos/gastos.component';
 import { NuevaSubComponent } from './components/nueva-sub/nueva-sub.component';
 import { SuscripcionesComponent } from './components/suscripciones/suscripciones.component';
 import { PaginaLoginComponent } from './pages/pagina-login/pagina-login.component';
+import { CreauserComponent } from './components/creauser/creauser.component';
 
 const routes: Routes = [
   {path: '', component: PaginaLoginComponent},
   {path: 'index', component: GastosComponent},
   {path: 'suscripcions/:idUsuario', component: SuscripcionesComponent},
-  {path: 'nueva', component:NuevaSubComponent }
+  {path: 'nueva', component:NuevaSubComponent },
+  {path: 'creauser', component: CreauserComponent}
 
 ];
 

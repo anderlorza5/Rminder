@@ -17,7 +17,7 @@ export class SuscripcionesComponent implements OnInit {
 
   constructor(private _suscripcionService: SuscripcionService, private activatedRoute: ActivatedRoute) {
     this.suscripciones = null;
-    this.suscripcionesUsuario = null;
+    this.suscripcionesUsuario = [];
     this.idUsuario = 0;
     this.frase = "";
 
@@ -29,16 +29,17 @@ export class SuscripcionesComponent implements OnInit {
       this.idUsuario = parameters.get('idUsuario');
     });
 
-    this._suscripcionService.getSuscripcionData().subscribe(x => this.suscripciones=x);
+    this._suscripcionService.getSuscripcionData().subscribe((x) => (this.suscripciones=x) && this.arraySuscripciones());
 
-    this.arraySuscripciones();
+    
 
  }
 
  arraySuscripciones(){
+   
   if(this.suscripciones != null){
     this.suscripciones.forEach(element => {
-      if(element.id_Usuario == this.idUsuario){
+      if(element.id_usuario == this.idUsuario){
         this.suscripcionesUsuario?.push(element);
       }
     });

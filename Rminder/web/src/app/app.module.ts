@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmptyComponentComponent } from './components/empty-component/empty-component.component';
 import { HomeComponentComponent } from './pages/home/home-component/home-component.component';
 
 import { LoginComponent } from './components/login/login.component';
@@ -15,19 +14,20 @@ import { PaginaGastosComponent } from './pages/pagina-gastos/pagina-gastos.compo
 import { SuscripcionesComponent } from './components/suscripciones/suscripciones.component';
 import { GastosComponent } from './components/gastos/gastos.component';
 import { UsuariosService } from './services/user.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuscripcionService } from './services/suscripcion.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgChartsModule } from 'ng2-charts';
 import { GraficoComponent } from './components/grafico/grafico.component';
 import { NuevaSubComponent } from './components/nueva-sub/nueva-sub.component';
+import { UserHeaderComponent } from './components/user-header/user-header.component';
+import { CreauserComponent } from './components/creauser/creauser.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmptyComponentComponent,
     HomeComponentComponent,
 
     LoginComponent,
@@ -40,6 +40,8 @@ import { NuevaSubComponent } from './components/nueva-sub/nueva-sub.component';
     GastosComponent,
     GraficoComponent,
     NuevaSubComponent,
+    UserHeaderComponent,
+    CreauserComponent,
 
   ],
   imports: [
@@ -47,7 +49,8 @@ import { NuevaSubComponent } from './components/nueva-sub/nueva-sub.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgChartsModule
+    NgChartsModule,
+    FormsModule
 
   ],
   providers: [SuscripcionService, UsuariosService],

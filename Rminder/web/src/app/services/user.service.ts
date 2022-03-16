@@ -13,15 +13,14 @@ export class UsuariosService {
   }
 
 
-  getUsuarioId(id :number) : Observable<Usuario> {
+  getUsuarioId(id:number) : Observable<Usuario> {
     return this.http.get<Usuario>(environment.API_URL + 'users/'+id);
   }
 
   postUsuarioData(body : any) : Usuario {
     let bodyData =new Usuario();
-    bodyData.id=body.usuarioId;
-    bodyData.nombre=body.usuarioNombre;//estos nombres van igual al declarar el formulario en l ts
-    bodyData.contrasenia= body.usuarioContraseña;
+    bodyData.nombre=body.nombre;//estos nombres van igual al declarar el formulario en l ts
+    bodyData.contrasenia= body.contrasenia;
 
 
 

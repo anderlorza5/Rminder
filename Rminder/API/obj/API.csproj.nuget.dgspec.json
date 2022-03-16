@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/ander/Rminder/Rminder/API/API.csproj": {}
+    "/home/daniel/Escritorio/Rminder-main/Rminder/API/API.csproj": {}
   },
   "projects": {
-    "/home/ander/Rminder/Rminder/API/API.csproj": {
+    "/home/daniel/Escritorio/Rminder-main/Rminder/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ander/Rminder/Rminder/API/API.csproj",
+        "projectUniqueName": "/home/daniel/Escritorio/Rminder-main/Rminder/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/home/ander/Rminder/Rminder/API/API.csproj",
-        "packagesPath": "/home/ander/.nuget/packages/",
-        "outputPath": "/home/ander/Rminder/Rminder/API/obj/",
+        "projectPath": "/home/daniel/Escritorio/Rminder-main/Rminder/API/API.csproj",
+        "packagesPath": "/home/daniel/.nuget/packages/",
+        "outputPath": "/home/daniel/Escritorio/Rminder-main/Rminder/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ander/.nuget/NuGet/NuGet.Config"
+          "/home/daniel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }

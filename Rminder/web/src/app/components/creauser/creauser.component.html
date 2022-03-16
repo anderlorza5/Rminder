@@ -18,28 +18,47 @@
 
   <!--Formulario para usuarios ya creados-->
 <main class="form-signin">
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="newuserForm" (ngSubmit)="onSubmit()">
     <img class="mb-4" src="../assets/images/logo.png" alt="" width="300" height="300">
-    <h1 class="h3 mb-3 fw-normal">Porfavor inicia sesión</h1>
+    <h1 class="h3 mb-3 fw-normal">Rellena los campos</h1>
 
     <div class="form-floating">
       <input type="text" class="form-control" formControlName="nombre" form id="floatingInput" placeholder="Usuario">
       <label for="floatingInput">Nombre de usuario</label>
     </div>
+
     <div class="form-floating">
-      <input type="password" class="form-control" formControlName="contrasenia" id="floatingPassword" placeholder="Contraseña">
+      <input type="text" class="form-control"  placeholder="Nombre" >
+      <label>Nombre</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="text" class="form-control"  placeholder="Apellido" >
+      <label >Apellido</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="date" class="form-control" >
+      <label >Fecha de nacimiento</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="password" class="form-control" formControlName="contrasenia" id="floatingPassword" placeholder="Contraseña" >
       <label for="floatingPassword">Contraseña</label>
     </div>
 
 
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Crear Cuenta</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
     <p style="color: red;">{{frase}}</p>
 
-
-    <p style="cursor: pointer;" [routerLink]="'/creauser/'">¿No tienes cuenta? Crea una.</p>
 
   </form>
 </main>
 
 
+
+
+
+
+</body>

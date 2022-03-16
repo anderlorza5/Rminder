@@ -1,6 +1,6 @@
 export class Suscripcion {
   id: number;
-  id_Usuario: number;
+  id_usuario: number;
   nombre: String;
   categoria: String;
   imagen: String;
@@ -12,7 +12,7 @@ export class Suscripcion {
 
   constructor() {
     this.id=0;
-    this.id_Usuario=0;
+    this.id_usuario=0;
     this.nombre="";
     this.categoria="";
     this.imagen="";

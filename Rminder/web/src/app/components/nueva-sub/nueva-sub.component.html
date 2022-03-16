@@ -1,78 +1,64 @@
-<div class="container">
-  <div class="row">
-      <div class="col-md-12">
-          <div class="well well-sm">
+<app-user-header></app-user-header>
+<div class="m-0 justify-content-center">
+            
+          <div class="col-auto p-4">
+            <h2>Añadir suscripción</h2>
               <form class="form-horizontal" method="post" [formGroup]="suscripcionForm">
                   <fieldset>
-                      <legend class="text-center header">Nueva suscripcione</legend>
                       <div class="form-group">
                         <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                         <div class="col-md-8">
-                            <input formControlName="suscripcionId_Usuario" id="fname" name="name" type="number" placeholder="id" class="form-control">
+                            <input formControlName="suscripcionId_Usuario" id="fname" name="name" type="number" placeholder="" class="form-control">
                         </div>
                     </div>
+                    <br>
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                           <div class="col-md-8">
                               <input formControlName="suscripcionNombre" id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
                           </div>
                       </div>
+                      <br>
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                           <div class="col-md-8">
-
-                              <p>categorias</p>
                               <input id="lname" name="name" type="text" placeholder="categorias" class="form-control">
-                              <!--<select formControlName="suscripcionCategoria"id="seleccionCategoria"name="transporte">
-
-                                <option>Entetenimiento</option>
-
-                                <option>Comida</option>
-
-                                <option>Revista/libros</option>
-                                <option>otros</option>
-
-                                </select>-->
-
                           </div>
                       </div>
-
+                      <br>
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                           <div class="col-md-8">
                               <input formControlName="suscripcionImagen"id="email" name="email" type="text" placeholder="imagen" class="form-control">
                           </div>
                       </div>
-
+                      <br>
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
                           <div class="col-md-8">
-                            <p>fecha vencimiento</p>
                               <input formControlName="suscripcionfechaVencimiento"id="fecha" name="fecha" type="date" placeholder="Phone" class="form-control">
                           </div>
                       </div>
-
+                      <br>
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                           <div class="col-md-8">
                               <label for="precio">
                                 <input formControlName="suscripcionPrecio"id="precio" name="precio" type="number" placeholder="precio" class="form-control">
                               </label>
-
                           </div>
                       </div>
-
+                    <br>
                       <div class="form-group">
-                          <div class="col-md-12 text-center">
+                          <div class="col-md-12">
                             <form novalidate (ngSubmit)="onSubmit()" [formGroup]="suscripcionForm">
-                               <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                               <button type="submit" class="btn btn-primary btn-lg">Añadir</button>
+                               <button type="button" class="btn btn-primary btn-lg" (click)="onVolver()">Volver</button>
                             </form>
-
                           </div>
                       </div>
                   </fieldset>
               </form>
           </div>
-      </div>
-  </div>
+
 </div>
