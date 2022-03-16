@@ -1,17 +1,35 @@
-<div class="col-lg-6 mb-4">
-<div class="card shadow mb-4">
-  <div class="card-header py-3">
-<div>
-    <div style="display: block">
-      <canvas baseChart
-        [data]="barChartData"
-        [options]="barChartOptions"
-        [type]="barChartType"
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)">
-      </canvas>
+<div class="row">
+  <div class="col-lg-6 mb-4">
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+  <div>
+      <div style="display: block">
+        <canvas baseChart
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [type]="barChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)">
+        </canvas>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-6 mb-4">
+    <div class="card mb-4 box-shadow">
+      <div class="card-header py-3" >
+        <h4 class="my-0 font-weight-normal">Gasto de {{usuarios?.nombre}}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title"><small class="text-muted">{{totalMes}}€ / mes</small></h1>
+        <h1 class="card-title pricing-card-title"><small class="text-muted">{{totalMes*12}}€ / año</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+  
+        </ul>
+      </div>
     </div>
-</div>
-</div>
-</div>
-</div>
+    </div>
+  
+  
+  </div>
