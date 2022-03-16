@@ -3,6 +3,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuariosService } from 'src/app/services/user.service';
+import { Constants } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-login',
@@ -69,6 +70,7 @@ export class LoginComponent implements OnInit {
       this.usuarios.forEach(element => {
         if(this.userForm.value.nombre == element.nombre){
           this.idUsuario = element.id;
+          Constants.IDUSER = this.idUsuario;
           this.userOK = true;
           this.contador++;
         }

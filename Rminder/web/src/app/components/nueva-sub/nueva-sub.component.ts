@@ -17,6 +17,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
   import { SuscripcionService } from 'src/app/services/suscripcion.service';
 import { UsuariosService } from 'src/app/services/user.service';
+import { Constants } from 'src/app/utils/constants';
 
 @Component({
   selector: 'app-nueva-sub',
@@ -25,6 +26,14 @@ import { UsuariosService } from 'src/app/services/user.service';
 })
 export class NuevaSubComponent implements OnInit {
 
+  suscripcionForm=this.fb.group({
+    id_usuario:[Constants.IDUSER,Validators.required],
+    nombre:['',Validators.required],
+    categoria:['',Validators.required],
+    imagen:['',Validators.required],
+    fechavencimiento:['',Validators.required],
+    precio:['',Validators.required]
+  });
 
   constructor( private fb: FormBuilder, private _suscripcionService: SuscripcionService, private _userService: UsuariosService, private activatedRoute: ActivatedRoute) {
 
@@ -39,13 +48,6 @@ export class NuevaSubComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  suscripcionForm=this.fb.group({
-    suscripcionId_Usuario:['',Validators.required],
-    suscripcionNombre:['',Validators.required],
-    suscripcionCategoria:['',Validators.required],
-    suscripcionImagen:['',Validators.required],
-    suscripcionfechaVencimiento:['',Validators.required],
-    suscripcionPrecio:['',Validators.required]
-  });
+
 
 }

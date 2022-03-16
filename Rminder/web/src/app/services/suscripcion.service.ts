@@ -19,12 +19,12 @@ export class SuscripcionService {
 
   postSuscripcionData(body : any) : Suscripcion {
     let bodyData =new Suscripcion();
-    bodyData.id_usuario=body.suscripcionId_Usuario;
-    bodyData.nombre=body.suscripcionNombre;
-    bodyData.categoria=body.suscripcionCategoria;
-    bodyData.imagen=body.suscripcionImagen;
-    bodyData.fechaVencimiento=body.suscripcionfechaVencimiento;
-    bodyData.precio=body.suscripcionPrecio;
+    bodyData.id_usuario=body.id_usuario;
+    bodyData.nombre=body.nombre;
+    bodyData.categoria=body.categoria;
+    bodyData.imagen=body.imagen;
+    bodyData.fechaVencimiento=body.fechavencimiento;
+    bodyData.precio=body.precio;
 
 
     let result =new Suscripcion();
