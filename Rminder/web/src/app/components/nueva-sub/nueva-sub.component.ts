@@ -44,7 +44,6 @@ export class NuevaSubComponent implements OnInit {
    }
   onSubmit(){
     this.imagen();
-
     this.suscripcionForm.value.id_usuario = this.idUsuario;
     this._suscripcionService.postSuscripcionData(this.suscripcionForm.value)
     alert("Suscripcion "+this.suscripcionForm.value.nombre+" creada.")
@@ -62,7 +61,6 @@ export class NuevaSubComponent implements OnInit {
   }
 
   imagen(){
-    alert(this.suscripcionForm.value.categoria)
     switch (this.suscripcionForm.value.categoria) {
 
       case "Entretenimiento":
@@ -80,6 +78,9 @@ export class NuevaSubComponent implements OnInit {
       case "Revistas":
         this.suscripcionForm.value.imagen = "./assets/img/revistas.png";
         break;
+
+      default:
+        this.suscripcionForm.value.imagen = "./assets/img/default.png";
     }
 
   }

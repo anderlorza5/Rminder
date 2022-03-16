@@ -40,4 +40,11 @@ export class SuscripcionService {
     )
     return result;
   }
+
+  deletePost(id :number) {
+
+    this.http.delete(environment.API_URL +'suscripcions/'+id).subscribe(data => {
+      console.log(data);
+    });
+  }
 }

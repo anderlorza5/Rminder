@@ -30,9 +30,11 @@ export class SuscripcionesComponent implements OnInit {
     });
 
     this._suscripcionService.getSuscripcionData().subscribe((x) => (this.suscripciones=x) && this.arraySuscripciones());
+ }
 
-
-
+ borrar(id :number){
+  this._suscripcionService.deletePost(id);
+  window.location.reload();
  }
 
  arraySuscripciones(){
