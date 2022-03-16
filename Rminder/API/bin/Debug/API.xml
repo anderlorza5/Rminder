@@ -53,7 +53,14 @@
              }
              </remarks>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Api.Controllers.SuscripcionsController.Put(BaseSuscripcionDTO,System.Int32)" -->
+        <member name="M:Api.Controllers.SuscripcionsController.Put(BaseSuscripcionDTO,System.Int32)">
+            <summary>
+            it modifies a Suscripcion
+            </summary>
+            <param name="baseSuscripcion">the created Suscripcion <see cref="T:BaseSuscripcionDTO"/></param>
+            <param name="Id">the id of the modified Suscripcion</param>
+            <returns>Returns the modified Suscripcion <see cref="T:SuscripcionDTO"/></returns>
+        </member>
         <member name="M:Api.Controllers.UsersController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.UsersController},IUserService)">
             <summary>
             It creates a UserController

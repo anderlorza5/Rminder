@@ -12,8 +12,7 @@ CREATE TABLE [dbo].[Suscripcion]
     [Categoria] NVARCHAR(50) NOT NULL,
     [Imagen] NVARCHAR(100) NOT NULL,
     [FechaVencimiento] DATETIME2 NOT NULL,
-    [Precio] FLOAT NOT NULL,
-    FOREIGN KEY (Id_usuario) REFERENCES Usuario(Id)
+    [Precio] FLOAT NOT NULL
     -- Specify more columns here
 );
 GO

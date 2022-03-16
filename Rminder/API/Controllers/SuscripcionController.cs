@@ -107,7 +107,7 @@ public class SuscripcionsController : ControllerBase
     /// </summary>
     /// <param name="baseSuscripcion">the created Suscripcion <see cref="BaseSuscripcionDTO"/></param>
     /// <param name="Id">the id of the modified Suscripcion</param>
-    /// <returns>Returns the modified Suscripcion <see cref="SuscripcionDTO"/><</returns>
+    /// <returns>Returns the modified Suscripcion <see cref="SuscripcionDTO"/></returns>
     [HttpPut("{Id}")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SuscripcionDTO))]
     public ActionResult<SuscripcionDTO> Put([FromBody] BaseSuscripcionDTO baseSuscripcion, int Id)
