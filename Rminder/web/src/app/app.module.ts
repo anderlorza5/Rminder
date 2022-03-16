@@ -7,9 +7,6 @@ import { HomeComponentComponent } from './pages/home/home-component/home-compone
 
 import { LoginComponent } from './components/login/login.component';
 import { PaginaLoginComponent } from './pages/pagina-login/pagina-login.component';
-import { PaginaSuscripcionesComponent } from './pages/pagina-suscripciones/pagina-suscripciones.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { PaginaGastosComponent } from './pages/pagina-gastos/pagina-gastos.component';
 import { SuscripcionesComponent } from './components/suscripciones/suscripciones.component';
 import { GastosComponent } from './components/gastos/gastos.component';
@@ -32,9 +29,6 @@ import { CreauserComponent } from './components/creauser/creauser.component';
 
     LoginComponent,
     PaginaLoginComponent,
-    PaginaSuscripcionesComponent,
-    HeaderComponent,
-    FooterComponent,
     PaginaGastosComponent,
     SuscripcionesComponent,
     GastosComponent,

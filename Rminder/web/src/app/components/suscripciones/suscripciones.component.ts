@@ -31,12 +31,12 @@ export class SuscripcionesComponent implements OnInit {
 
     this._suscripcionService.getSuscripcionData().subscribe((x) => (this.suscripciones=x) && this.arraySuscripciones());
 
-    
+
 
  }
 
  arraySuscripciones(){
-   
+
   if(this.suscripciones != null){
     this.suscripciones.forEach(element => {
       if(element.id_usuario == this.idUsuario){

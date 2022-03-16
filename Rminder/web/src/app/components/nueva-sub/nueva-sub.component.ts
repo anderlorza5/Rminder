@@ -13,7 +13,7 @@ import {
   ValidatorFn,
 
   } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
   import { SuscripcionService } from 'src/app/services/suscripcion.service';
 import { UsuariosService } from 'src/app/services/user.service';
@@ -27,7 +27,7 @@ import { Constants } from 'src/app/utils/constants';
 export class NuevaSubComponent implements OnInit {
 
   suscripcionForm=this.fb.group({
-    id_usuario:[Constants.IDUSER,Validators.required],
+    id_usuario:["",Validators.required],
     nombre:['',Validators.required],
     categoria:['',Validators.required],
     imagen:['',Validators.required],
@@ -35,18 +35,28 @@ export class NuevaSubComponent implements OnInit {
     precio:['',Validators.required]
   });
 
-  constructor( private fb: FormBuilder, private _suscripcionService: SuscripcionService, private _userService: UsuariosService, private activatedRoute: ActivatedRoute) {
+  idUsuario:number;
+
+  constructor( private fb: FormBuilder, private _suscripcionService: SuscripcionService, private _userService: UsuariosService, private activatedRoute: ActivatedRoute, public router: Router) {
+    this.idUsuario = 0;
+
 
    }
   onSubmit(){
+    this.suscripcionForm.value.id_usuario = this.idUsuario;
     this._suscripcionService.postSuscripcionData(this.suscripcionForm.value)
+    alert("Suscripcion "+this.suscripcionForm.value.nombre+" creada.")
+    this.router.navigate(['/suscripcions/'+this.idUsuario]);
   }
 
   onVolver(){
-    window.location.href='http://localhost:4200/suscripcions/';
+    this.router.navigate(['/suscripcions/'+this.idUsuario]);
   }
 
   ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe((parameters: any) => {
+      this.idUsuario = parameters.get('idUsuario');
+    });
   }
 
 

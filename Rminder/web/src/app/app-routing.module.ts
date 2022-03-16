@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: PaginaLoginComponent},
   {path: 'index', component: GastosComponent},
   {path: 'suscripcions/:idUsuario', component: SuscripcionesComponent},
-  {path: 'nueva', component:NuevaSubComponent },
+  {path: 'nueva/:idUsuario', component:NuevaSubComponent },
   {path: 'creauser', component: CreauserComponent}
 
 ];
