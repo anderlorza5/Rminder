@@ -8,6 +8,8 @@ public interface ISuscripcionService
 {
     public IEnumerable<SuscripcionDTO> GetAll();
 
+    public IEnumerable<SuscripcionDTO> GetAllSubs(int guid);
+
     public SuscripcionDTO GetByID(int guid);
 
     public SuscripcionDTO Add(BaseSuscripcionDTO guid);

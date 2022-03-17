@@ -58,4 +58,9 @@ public class SuscripcionService : ISuscripcionService
         return _mapper.Map<SuscripcionDTO>(_mappedSuscripcion);
     }
 
+    public IEnumerable<SuscripcionDTO> GetAllSubs(int guid)
+    {
+        return _mapper.Map<IEnumerable<SuscripcionDTO>>(_context.Suscripcions.Where(x => x.Id_usuario==guid));
+    }
+
 }

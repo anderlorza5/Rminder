@@ -116,4 +116,15 @@ public class SuscripcionsController : ControllerBase
         return Ok(_SuscripcionService.Modify(baseSuscripcion, Id));
     }
 
+    /// <summary>
+    /// Returns all the Suscripcions
+    /// </summary>
+    /// <returns>Returns a list of <see cref="SuscripcionDTO"/></returns>
+    [HttpGet("{idUsuario}/detail")]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SuscripcionDTO))]
+    public ActionResult<SuscripcionDTO> GetSubs(int idUsuario)
+    {
+        return Ok(_SuscripcionService.GetAllSubs(idUsuario));
+    }
+
 }

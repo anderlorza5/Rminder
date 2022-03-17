@@ -47,4 +47,7 @@ export class SuscripcionService {
       console.log(data);
     });
   }
+  getSuscripcionUser(id : number) : Observable<Suscripcion[]> {
+    return this.http.get<Suscripcion[]>(environment.API_URL + 'suscripcions/'+id+'/detail');
+  }
 }

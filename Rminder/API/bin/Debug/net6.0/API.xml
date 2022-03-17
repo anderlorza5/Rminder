@@ -61,6 +61,12 @@
             <param name="Id">the id of the modified Suscripcion</param>
             <returns>Returns the modified Suscripcion <see cref="T:SuscripcionDTO"/></returns>
         </member>
+        <member name="M:Api.Controllers.SuscripcionsController.GetSubs(System.Int32)">
+            <summary>
+            Returns all the Suscripcions
+            </summary>
+            <returns>Returns a list of <see cref="T:SuscripcionDTO"/></returns>
+        </member>
         <member name="M:Api.Controllers.UsersController.#ctor(Microsoft.Extensions.Logging.ILogger{Api.Controllers.UsersController},IUserService)">
             <summary>
             It creates a UserController

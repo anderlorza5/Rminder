@@ -41,34 +41,39 @@ export class GraficoComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe((parameters: any) => {this.idUsuario=parameters.get("idUsuario")});
     this._userService.getUsuarioId(this.idUsuario).subscribe(apiUsers => (this.usuarios=apiUsers) && this.showGrafico());
 
-
+    this.s_service.getSuscripcionData().subscribe((arrayPaco) => (this.suscripciones=arrayPaco) && this.arraySuscripciones());
     this.s_service.getSuscripcionData().subscribe((arrayPaco) => (this.suscripciones=arrayPaco) && this.sumaPrecios());
+    
 
     
 
   }
 
   sumaPrecios(){
-    if(this.suscripciones != null){
-      this.suscripciones.forEach(element => {
+    if(this.suscripcionesUsuario != null){
+      this.suscripcionesUsuario.forEach(element => {
+        
         this.totalMes = this.totalMes+element.precio;
       });
     }
   }
 
+  
+
   showGrafico(){
-    this.s_service.getSuscripcionData().subscribe((x) => 
+    this.s_service.getSuscripcionUser(this.idUsuario).subscribe((x) => 
     {
-     
       let chartData = new Array(12);
       let currentMonth=-1;
       x.forEach((element) => {
+
         currentMonth = new Date(element.fechaVencimiento!).getMonth();
           if (chartData[currentMonth] === undefined) {
           chartData[currentMonth] = element.precio;
         } else {
           chartData[currentMonth] += element.precio;
         }
+          
       });
 
 
@@ -92,7 +97,7 @@ export class GraficoComponent implements OnInit {
     });
   }
 
-  /*arraySuscripciones(){
+  arraySuscripciones(){
 
     if(this.suscripciones != null){
       this.suscripciones.forEach(element => {
@@ -101,7 +106,7 @@ export class GraficoComponent implements OnInit {
         }
       });
     }
-   }*/
+   }
 
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
